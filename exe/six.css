@@ -5,6 +5,11 @@ body,html{
     width:100%;
 }
 
+*{
+        margin: 0;
+    padding: 0;
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -27,13 +32,17 @@ li{
     */
     flex-flow: row nowrap;
     /* Then we define how is distributed the remaining space */
+
     justify-content: space-around;
     align-content:flex-end;
     align-items:flex-end;
+
+
 }
 .flex-item {
   
     background: tomato;
+
     padding: 5px;
     width: 200px;
     height: 150px;
@@ -47,4 +56,52 @@ li{
 }
 .flex-item:first-child{
     flex-grow:2;
+
+  
+    /*width: 200px;*/
+    /*height: 250px;*/
+   
+    /*line-height: 150px;*/
+
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    /*width: 100%;*/
+   
+   
+}
+.flex-item:first-child{
+    flex-grow:2;
+    flex-shrink:3;
+    background: #33eedd;
+    /*flex-basis:60%;*/
+    order:2;
+}
+.flex-item:nth-child(2){
+    flex-grow:1;
+    background: blue;
+    /*flex-basis:10%;*/
+    order:1;
+}
+.flex-item:nth-child(3){
+    flex-grow:1;
+    
+    /*flex-basis:30%;*/
+    order:3;
+}
+
+@media all and (max-width: 640px) {
+    .flex-container{
+        flex-flow:column nowrap;
+        -webkit-order: 0;
+            order: 0;
+           
+    }
+    .flex-item{
+         height: 100px;
+    }
+    .flex-item:first-child{
+        order:0;
+    }
+
 }
