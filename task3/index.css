@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  display: block;
+  box-sizing:border-box;
+
+}
+.main{
+background: #eee;
+  overflow: auto;
+
+}
+.content{
+  width: 100%;float: left;
+  background: #ff4400;
+}
+.body{
+  background: green;
+  float: left;
+    margin-left:120px;
+    margin-right: 200px;
+     
+   
+}
+aside{
+   background: blue;
+    float: left;
+}
+.left{
+  margin-left:-100%;
+  width: 120px;
+}
+.right{
+  margin-left:-200px;
+  width: 200px;
+  height: 100px;
+}
